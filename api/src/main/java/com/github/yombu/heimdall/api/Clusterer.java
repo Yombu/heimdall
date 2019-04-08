@@ -37,7 +37,7 @@ public class Clusterer<I, C extends Cluster<I>>
     {
         cluster.getMemberIds().remove(itemToBeReplaced);
         cluster.getMemberIds().add(newItem);
-        clusterStore.save(cluster);
+        clusterStore.update(cluster);
     }
 
     //Think about a public version of this as well. Keep in mind that this will be a costly operation
@@ -45,6 +45,6 @@ public class Clusterer<I, C extends Cluster<I>>
     private void removeFromCluster(I clusterItemId, C cluster)
     {
         cluster.getMemberIds().remove(clusterItemId);
-        clusterStore.save(cluster);
+        clusterStore.update(cluster);
     }
 }

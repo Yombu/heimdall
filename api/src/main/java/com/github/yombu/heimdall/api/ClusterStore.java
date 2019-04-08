@@ -10,5 +10,5 @@ public interface ClusterStore<I,C extends Cluster<I>>
 
     Stream<C> list();
 
-    void save(C cluster);
+    void update(C cluster);
 }
