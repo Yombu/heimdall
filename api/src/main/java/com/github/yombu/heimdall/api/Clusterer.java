@@ -1,4 +1,4 @@
-package com.github.yombu.heimdall;
+package com.github.yombu.heimdall.api;
 
 import java.util.Map;
 
@@ -28,7 +28,7 @@ public class Clusterer<I, C extends Cluster<I>>
 
     public Cluster<I> addToCluster(ClusterItem<I> item) throws UnprocessableEntityException
     {
-        C highscoreCluster;
+        C highscoreCluster = null;
         //to be implemented
         return highscoreCluster;
     }
