@@ -17,7 +17,7 @@ public class SyntheticPojoGenerator
         for (int i = 0; i < times; i++)
         {
             Pojo pojo = new Pojo();
-            pojo.setId(random.nextInt());
+            pojo.setId(i);
             pojo.setFirstname(newRandomString());
             pojo.setLastname(newRandomString());
             pojo.setDescription(newRandomString());

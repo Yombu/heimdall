@@ -1,7 +1,6 @@
 package com.github.yombu.heimdall.usecase;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 import com.github.yombu.heimdall.api.ClusterItem;
 import com.github.yombu.heimdall.api.ClusterStore;
@@ -26,8 +25,8 @@ public class MyApp
         Clusterer<Integer, InMemoryCluster> clusterer = new Clusterer(clusterStore, itemStore, null);
         clusterItems.forEach(clusterer::addToCluster);
 
-        System.out.println("The following clusters were generated: " +
-            clusterStore.list().collect(Collectors.toList()));
+        System.out.println("The following clusters were generated: ");
+        clusterStore.list().forEach(System.out::println);
     }
 
     private List<ClusterItem<Integer>> generateItems(int times)
