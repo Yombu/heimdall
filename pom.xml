@@ -23,7 +23,7 @@
     <modules>
         <module>api</module>
         <module>impl</module>
-        <module>usecase</module>
+        <module>example</module>
     </modules>
 
     <properties>

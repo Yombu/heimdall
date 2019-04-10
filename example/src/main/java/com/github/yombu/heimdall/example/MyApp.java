@@ -1,4 +1,4 @@
-package com.github.yombu.heimdall.usecase;
+package com.github.yombu.heimdall.example;
 
 import java.util.List;
 
@@ -22,7 +22,7 @@ public class MyApp
         List<ClusterItem<Integer>> clusterItems = generateItems(20);
         clusterItems.forEach(itemStore::add);
 
-        Clusterer<Integer, InMemoryCluster> clusterer = new Clusterer(clusterStore, itemStore, null);
+        Clusterer<Integer, InMemoryCluster> clusterer = new Clusterer<>(clusterStore, itemStore, null);
         clusterItems.forEach(clusterer::addToCluster);
 
         System.out.println("The following clusters were generated: ");

@@ -1,4 +1,4 @@
-package com.github.yombu.heimdall.usecase;
+package com.github.yombu.heimdall.example;
 
 public class Main
 {
