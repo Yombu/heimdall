@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-import com.github.mizool.core.exception.UnprocessableEntityException;
 import info.debatty.java.stringsimilarity.Damerau;
 
 @Slf4j
@@ -20,13 +19,13 @@ public class Clusterer<I, C extends Cluster<I>>
 
     @Getter
     @RequiredArgsConstructor
-    private class ScoredCluster
+    private static class ScoredCluster<C>
     {
         private final Double score;
         private final C cluster;
     }
 
-    public Cluster<I> addToCluster(ClusterItem<I> item) throws UnprocessableEntityException
+    public Cluster<I> addToCluster(ClusterItem<I> item)
     {
         C highscoreCluster = null;
         //to be implemented
