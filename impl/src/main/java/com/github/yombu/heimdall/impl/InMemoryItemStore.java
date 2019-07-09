@@ -1,6 +1,6 @@
 package com.github.yombu.heimdall.impl;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import javax.annotation.Nonnull;
 
@@ -10,7 +10,7 @@ import com.google.common.collect.Lists;
 
 public class InMemoryItemStore implements ItemStore<Integer>
 {
-    private ArrayList<ClusterItem<Integer>> clusterItems = Lists.newArrayList();
+    private List<ClusterItem<Integer>> clusterItems = Lists.newArrayList();
 
     @Nonnull
     @Override
@@ -21,7 +21,6 @@ public class InMemoryItemStore implements ItemStore<Integer>
 
     public void add(ClusterItem<Integer> item)
     {
-        item.setId(clusterItems.size());
         clusterItems.add(item);
     }
 }
