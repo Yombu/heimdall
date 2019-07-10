@@ -1,16 +1,16 @@
 package com.github.yombu.heimdall.impl;
 
-import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Nonnull;
 
 import com.github.yombu.heimdall.api.ClusterItem;
 import com.github.yombu.heimdall.api.ItemStore;
-import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 
 public class InMemoryItemStore implements ItemStore<Integer>
 {
-    private List<ClusterItem<Integer>> clusterItems = Lists.newArrayList();
+    private Map<Integer, ClusterItem<Integer>> clusterItems = Maps.newHashMap();
 
     @Nonnull
     @Override
@@ -19,8 +19,8 @@ public class InMemoryItemStore implements ItemStore<Integer>
         return clusterItems.get(id);
     }
 
-    public void add(ClusterItem<Integer> item)
+    public void put(ClusterItem<Integer> item)
     {
-        clusterItems.add(item);
+        clusterItems.put(item.getId(), item);
     }
 }

@@ -1,5 +1,7 @@
 package com.github.yombu.heimdall.example;
 
+import java.util.Map;
+
 import com.github.yombu.heimdall.api.ClusterItem;
 import com.google.common.collect.ImmutableMap;
 
@@ -12,7 +14,7 @@ public class PojoConverter
 
     public ClusterItem<Integer> fromPojo(Pojo pojo)
     {
-        ImmutableMap<String, String> payload = ImmutableMap.of(
+        Map<String, String> payload = ImmutableMap.of(
             FIRSTNAME, pojo.getFirstname(),
             LASTNAME, pojo.getLastname(),
             DESCRIPTION, pojo.getDescription(),

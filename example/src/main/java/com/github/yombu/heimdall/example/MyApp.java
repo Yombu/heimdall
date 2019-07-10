@@ -20,7 +20,7 @@ public class MyApp
     public void run()
     {
         List<ClusterItem<Integer>> clusterItems = generateItems(20);
-        clusterItems.forEach(itemStore::add);
+        clusterItems.forEach(itemStore::put);
 
         Clusterer<Integer, InMemoryCluster> clusterer = new Clusterer<>(clusterStore, itemStore, null);
         clusterItems.forEach(clusterer::addToCluster);
