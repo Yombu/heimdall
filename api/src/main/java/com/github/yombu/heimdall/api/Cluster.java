@@ -1,4 +1,4 @@
-package com.github.yombu.heimdall;
+package com.github.yombu.heimdall.api;
 
 import java.util.List;
 import java.util.Map;

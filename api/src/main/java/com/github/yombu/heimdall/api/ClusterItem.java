@@ -1,10 +1,10 @@
-package com.github.yombu.heimdall;
+package com.github.yombu.heimdall.api;
 
 import java.util.Map;
 
-import lombok.Data;
+import lombok.Value;
 
-@Data
+@Value
 public class ClusterItem<I>
 {
     private I id;

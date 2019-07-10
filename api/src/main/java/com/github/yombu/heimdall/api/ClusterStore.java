@@ -1,4 +1,4 @@
-package com.github.yombu.heimdall;
+package com.github.yombu.heimdall.api;
 
 import java.util.List;
 import java.util.Map;
@@ -10,5 +10,5 @@ public interface ClusterStore<I, C extends Cluster<I>>
 
     Stream<C> list();
 
-    void save(C cluster);
+    void update(C cluster);
 }
